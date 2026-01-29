@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zekarias Tilahun Kefato | ML Researcher</title>
+    <meta name="description" content="Postdoctoral Researcher in Machine Learning at KTH Royal Institute of Technology. Specializing in Graph Neural Networks and Graph Representation Learning.">
+    
+    <!-- Tailwind CSS via CDN (GitHub Pages compatible) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Animation Keyframes */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+        @keyframes pulse-node {
+            0%, 100% { r: 6; opacity: 0.8; }
+            50% { r: 8; opacity: 1; }
+        }
+        @keyframes pulse-outline {
+            0% { r: 25; opacity: 0.6; }
+            100% { r: 60; opacity: 0; }
+        }
+        
+        .float-animation { animation: float 8s ease-in-out infinite; }
+        .node-pulse { animation: pulse-node 4s ease-in-out infinite; }
+        .node-pulse-delayed { animation: pulse-node 4s ease-in-out infinite; animation-delay: 2s; }
+        
+        .skill-tag {
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Smooth scroll behavior */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-slate-900 tracking-tight">ZTK</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+                <a href="#research" class="hover:text-blue-600 transition-colors">Research</a>
+                <a href="#activities" class="hover:text-blue-600 transition-colors">Activities</a>
+                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-slate-600 p-2">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 absolute w-full shadow-lg">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#about" class="block text-slate-600 hover:text-blue-600 py-2">About</a>
+                <a href="#research" class="block text-slate-600 hover:text-blue-600 py-2">Research</a>
+                <a href="#activities" class="block text-slate-600 hover:text-blue-600 py-2">Activities</a>
+                <a href="#skills" class="block text-slate-600 hover:text-blue-600 py-2">Skills</a>
+                <a href="#contact" class="block text-slate-600 hover:text-blue-600 py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Gradients -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-slate-100 -z-10"></div>
+        <div class="absolute top-20 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-slate-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" style="animation-delay: 2s"></div>
+        
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <div class="space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                    <span class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+                    Postdoc Researcher @ KTH
+                </div>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight">
+                    Zekarias <span class="gradient-text">Tilahun</span> Kefato
+                </h1>
+                <p class="text-xl text-slate-600 leading-relaxed max-w-lg">
+                    Machine Learning Researcher specializing in Graph Neural Networks, Graph Representation Learning, and Natural Language Processing.
+                </p>
+                
+                <!-- Two-column buttons -->
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
+                    <a href="#contact" class="px-8 py-3 bg-slate-900 text-white rounded-full font-medium hover:bg-slate-800 transition-all hover:scale-105 shadow-lg">
+                        Get in Touch
+                    </a>
+                    <a href="https://zekarias-tilahun.github.io/zack/cv.pdf" class="px-8 py-3 border-2 border-slate-300 text-slate-700 rounded-full font-medium hover:border-slate-900 hover:text-slate-900 transition-all">
+                        Download CV
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Animated Graph Visualization (Self-contained SVG) -->
+            <div class="relative flex justify-center items-center order-first md:order-last">
+                <div class="relative w-72 h-72 md:w-96 md:h-96 float-animation">
+                    <!-- Background Glow -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-600/20 rounded-full blur-3xl"></div>
+                    
+                    <!-- Graph Neural Network Visualization -->
+                    <svg viewBox="0 0 400 400" class="w-full h-full drop-shadow-2xl">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.8" />
+                                <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.8" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        
+                        <!-- Background Rings -->
+                        <circle cx="200" cy="200" r="150" fill="none" stroke="#e2e8f0" stroke-width="1" opacity="0.5" />
+                        <circle cx="200" cy="200" r="100" fill="none" stroke="#cbd5e1" stroke-width="1" opacity="0.3" />
+                        
+                        <!-- Connection Lines (Edges) -->
+                        <g stroke="url(#grad2)" stroke-width="2" opacity="0.6">
+                            <line x1="200" y1="50" x2="320" y2="140" />
+                            <line x1="320" y1="140" x2="280" y2="300" />
+                            <line x1="280" y1="300" x2="120" y2="300" />
+                            <line x1="120" y1="300" x2="80" y2="140" />
+                            <line x1="80" y1="140" x2="200" y2="50" />
+                            <line x1="200" y1="50" x2="280" y2="300" opacity="0.4" />
+                            <line x1="200" y1="50" x2="120" y2="300" opacity="0.4" />
+                            <line x1="320" y1="140" x2="80" y2="140" opacity="0.4" />
+                            <line x1="320" y1="140" x2="120" y2="300" opacity="0.4" />
+                            <line x1="80" y1="140" x2="280" y2="300" opacity="0.4" />
+                        </g>
+                        
+                        <!-- Central Node (Embedding Space) -->
+                        <circle cx="200" cy="200" r="25" fill="url(#grad1)" filter="url(#glow)" class="node-pulse" />
+                        <circle cx="200" cy="200" r="15" fill="white" opacity="0.3" />
+                        
+                        <!-- Input/Output Nodes -->
+                        <circle cx="200" cy="50" r="12" fill="#3b82f6" class="node-pulse" filter="url(#glow)" />
+                        <circle cx="320" cy="140" r="10" fill="#60a5fa" class="node-pulse-delayed" />
+                        <circle cx="280" cy="300" r="10" fill="#60a5fa" class="node-pulse" />
+                        <circle cx="120" cy="300" r="10" fill="#60a5fa" class="node-pulse-delayed" />
+                        <circle cx="80" cy="140" r="10" fill="#60a5fa" class="node-pulse" />
+                        
+                        <!-- Hidden Layer Nodes -->
+                        <circle cx="260" cy="90" r="6" fill="#93c5fd" opacity="0.8">
+                            <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="300" cy="220" r="6" fill="#93c5fd" opacity="0.8">
+                            <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" delay="1s" />
+                        </circle>
+                        <circle cx="200" cy="320" r="6" fill="#93c5fd" opacity="0.8">
+                            <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" delay="2s" />
+                        </circle>
+                        <circle cx="100" cy="220" r="6" fill="#93c5fd" opacity="0.8">
+                            <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" delay="0.5s" />
+                        </circle>
+                        <circle cx="140" cy="90" r="6" fill="#93c5fd" opacity="0.8">
+                            <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" delay="1.5s" />
+                        </circle>
+                        
+                        <!-- Data Flow Particles -->
+                        <circle cx="0" cy="0" r="3" fill="white" opacity="0.9">
+                            <animateMotion path="M200,50 L320,140" dur="2s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="0" cy="0" r="3" fill="white" opacity="0.9">
+                            <animateMotion path="M320,140 L280,300" dur="2s" repeatCount="indefinite" delay="0.4s" />
+                        </circle>
+                        <circle cx="0" cy="0" r="3" fill="white" opacity="0.9">
+                            <animateMotion path="M280,300 L120,300" dur="2s" repeatCount="indefinite" delay="0.8s" />
+                        </circle>
+                        <circle cx="0" cy="0" r="3" fill="white" opacity="0.9">
+                            <animateMotion path="M120,300 L80,140" dur="2s" repeatCount="indefinite" delay="1.2s" />
+                        </circle>
+                        <circle cx="0" cy="0" r="3" fill="white" opacity="0.9">
+                            <animateMotion path="M80,140 L200,50" dur="2s" repeatCount="indefinite" delay="1.6s" />
+                        </circle>
+                        
+                        <!-- Pulse Effect -->
+                        <circle cx="200" cy="200" r="30" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0">
+                            <animate attributeName="r" values="25;60" dur="3s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.6;0" dur="3s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                    
+                    <!-- Labels -->
+                    <div class="absolute -top-2 -right-2 bg-white/90 backdrop-blur px-3 py-1 rounded-lg shadow-lg border border-blue-100 text-xs font-semibold text-blue-800">
+                        GNN Layer
+                    </div>
+                    <div class="absolute -bottom-2 -left-2 bg-white/90 backdrop-blur px-3 py-1 rounded-lg shadow-lg border border-blue-100 text-xs font-semibold text-blue-800">
+                        Embeddings
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400"></i>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <i data-lucide="quote" class="w-12 h-12 text-blue-400 mx-auto mb-6 opacity-50"></i>
+            <blockquote class="serif text-3xl md:text-4xl italic leading-relaxed mb-6">
+                "What do you have that you did not receive?"
+            </blockquote>
+            <p class="text-xl text-slate-400 mb-4 serif italic">
+                "ያልተቀበልኸው የራስህ የሆነ ነገር ምን አለ?"
+            </p>
+            <div class="w-16 h-1 bg-blue-500 mx-auto mt-8"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-1">
+                    <h2 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">Background</h2>
+                    <h3 class="text-3xl font-bold text-slate-900">About Me</h3>
+                    <div class="w-20 h-1 bg-slate-900 mt-4"></div>
+                </div>
+                <div class="md:col-span-2 space-y-6 text-lg text-slate-600 leading-relaxed">
+                    <p>
+                        I am a postdoctoral researcher in Machine Learning at <strong class="text-slate-900">KTH Royal Institute of Technology</strong>. 
+                        I completed my PhD in Computer Science with a specialization in Machine Learning under the supervision of Prof. Montresor.
+                    </p>
+                    <p>
+                        My research broadly spans <strong class="text-slate-900">Machine Learning</strong>, <strong class="text-slate-900">Graph Analytics</strong>, 
+                        and <strong class="text-slate-900">Natural Language Processing</strong>, with particular emphasis on Graph-based Machine Learning methods.
+                    </p>
+                    <p>
+                        Currently, my work focuses on <strong class="text-slate-900">Graph Embedding</strong> (also known as Graph Representation Learning), 
+                        building upon my doctoral research. I explore cutting-edge topics including Graph Neural Networks (GNNs), 
+                        Contextualized Graph Representation Learning, and Self-supervised GNNs.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 pt-6">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                            <div class="text-2xl font-bold text-blue-600 mb-1">PhD</div>
+                            <div class="text-sm text-slate-600">Computer Science & ML</div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                            <div class="text-2xl font-bold text-blue-600 mb-1">KTH</div>
+                            <div class="text-sm text-slate-600">Royal Institute</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Focus -->
+    <section id="research" class="py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">Focus Areas</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Research Interests</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="share-2" class="w-7 h-7 text-blue-600"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Graph Neural Networks</h4>
+                    <p class="text-slate-600">Deep learning architectures for graph-structured data, including message passing networks and spectral methods.</p>
+                </div>
+                
+                <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="cpu" class="w-7 h-7 text-indigo-600"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Graph Embedding</h4>
+                    <p class="text-slate-600">Learning low-dimensional representations of graphs preserving structural and semantic properties.</p>
+                </div>
+                
+                <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="brain" class="w-7 h-7 text-purple-600"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Self-Supervised Learning</h4>
+                    <p class="text-slate-600">Contextualized and self-supervised approaches for graph representation learning without labeled data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Activities -->
+    <section id="activities" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">Service</h2>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-8">Professional Activities</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold text-sm">PC</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Program Committee Member</h4>
+                                <p class="text-slate-600 text-sm mt-1">IEEE SNAMS'19, SNAMS'20 • International Conference on Social Networks Analysis, Management and Security</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold text-sm">PC</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Program Committee Member</h4>
+                                <p class="text-slate-600 text-sm mt-1">LOD'18, LOD'19, LOD'20 • International Conference on Machine Learning, Optimization, and Data Science</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center">
+                                <i data-lucide="eye" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Reviewer</h4>
+                                <p class="text-slate-600 text-sm mt-1">Neurocomputing • Elsevier Pattern Recognition • IEEE TKDE • Computing Journal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+                    <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-5 h-5 text-blue-600"></i>
+                        Timeline
+                    </h4>
+                    <div class="relative border-l-2 border-slate-300 ml-3 space-y-8">
+                        <div class="relative pl-8">
+                            <div class="absolute -left-2 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
+                            <div class="text-sm text-blue-600 font-semibold">2020</div>
+                            <div class="text-slate-900 font-medium">PC Member • SNAMS'20, LOD'20</div>
+                            <div class="text-sm text-slate-600">Reviewer • IEEE TKDE, Pattern Recognition</div>
+                        </div>
+                        <div class="relative pl-8">
+                            <div class="absolute -left-2 top-1 w-4 h-4 bg-slate-400 rounded-full border-4 border-white"></div>
+                            <div class="text-sm text-slate-500 font-semibold">2019</div>
+                            <div class="text-slate-900 font-medium">PC Member • SNAMS'19, LOD'19</div>
+                            <div class="text-sm text-slate-600">Reviewer • Neurocomputing</div>
+                        </div>
+                        <div class="relative pl-8">
+                            <div class="absolute -left-2 top-1 w-4 h-4 bg-slate-400 rounded-full border-4 border-white"></div>
+                            <div class="text-sm text-slate-500 font-semibold">2018</div>
+                            <div class="text-slate-900 font-medium">PC Member • LOD'18</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-blue-400 uppercase tracking-wider mb-2">Expertise</h2>
+                <h3 class="text-3xl md:text-4xl font-bold">Technical Skills</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 flex items-center gap-2 text-blue-400">
+                        <i data-lucide="code-2" class="w-5 h-5"></i>
+                        Frameworks & Tools
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">TensorFlow</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">PyTorch</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Keras</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Apache Spark</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Hadoop</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Pandas</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">NumPy</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Scikit-learn</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 flex items-center gap-2 text-blue-400">
+                        <i data-lucide="terminal" class="w-5 h-5"></i>
+                        Programming Languages
+                    </h4>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span>Python</span>
+                            <div class="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 w-[95%]"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Java</span>
+                            <div class="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 w-[85%]"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Scala</span>
+                            <div class="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 w-[75%]"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>R</span>
+                            <div class="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 w-[80%]"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>C++</span>
+                            <div class="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 w-[70%]"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>JavaScript</span>
+                            <div class="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 w-[75%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 flex items-center gap-2 text-blue-400">
+                        <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                        Visualization
+                    </h4>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-slate-800 rounded-lg border border-slate-700">
+                            <div class="font-medium text-white mb-1">Plotly</div>
+                            <div class="text-sm text-slate-400">JavaScript, Python, R</div>
+                        </div>
+                        <div class="p-4 bg-slate-800 rounded-lg border border-slate-700">
+                            <div class="font-medium text-white mb-1">Python Stack</div>
+                            <div class="text-sm text-slate-400">Dash, Seaborn, Matplotlib</div>
+                        </div>
+                        <div class="p-4 bg-slate-800 rounded-lg border border-slate-700">
+                            <div class="font-medium text-white mb-1">R Ecosystem</div>
+                            <div class="text-sm text-slate-400">ggplot2, Shiny</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Footer -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Let's Connect</h2>
+            <p class="text-lg text-slate-600 mb-12">
+                Interested in collaboration or want to discuss Graph Neural Networks? 
+                Feel free to reach out.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <a href="mailto:zekarias@kth.se" class="flex items-center gap-3 px-6 py-3 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors text-slate-700">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    <span class="font-medium">Email</span>
+                </a>
+                <a href="https://www.linkedin.com/in/zekarias-tilahun" target="_blank" rel="noopener" class="flex items-center gap-3 px-6 py-3 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors text-slate-700">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    <span class="font-medium">LinkedIn</span>
+                </a>
+                <a href="https://github.com/zekarias-tilahun" target="_blank" rel="noopener" class="flex items-center gap-3 px-6 py-3 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors text-slate-700">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                    <span class="font-medium">GitHub</span>
+                </a>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener" class="flex items-center gap-3 px-6 py-3 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors text-slate-700">
+                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                    <span class="font-medium">Scholar</span>
+                </a>
+            </div>
+            
+            <div class="pt-12 border-t border-slate-200">
+                <p class="text-slate-500 text-sm mb-2">
+                    © <span id="year"></span> Zekarias Tilahun Kefato. All rights reserved.
+                </p>
+                <p class="text-slate-400 text-xs">
+                    Postdoctoral Researcher at KTH Royal Institute of Technology
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.add('bg-white/95');
+                navbar.classList.remove('bg-white/80');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.remove('bg-white/95');
+                navbar.classList.add('bg-white/80');
+            }
+        });
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('section > div').forEach((el) => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
