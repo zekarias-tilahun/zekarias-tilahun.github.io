@@ -3,18 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zekarias Tilahun Kefato | ML Researcher</title>
-    <meta name="description" content="Postdoctoral Researcher in Machine Learning at KTH Royal Institute of Technology. Specializing in Graph Neural Networks and Graph Representation Learning.">
+    <title>Zekarias Tilahun Kefato | Senior AI Scientist</title>
+    <meta name="description" content="Senior AI Scientist at AstraZeneca specializing in Graph Neural Networks, LLMs, and Machine Learning.">
     
-    <!-- Tailwind CSS via CDN (GitHub Pages compatible) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
@@ -26,23 +21,23 @@
             -webkit-text-fill-color: transparent;
         }
         
-        /* Animation Keyframes */
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(2deg); }
-        }
-        @keyframes pulse-node {
-            0%, 100% { r: 6; opacity: 0.8; }
-            50% { r: 8; opacity: 1; }
-        }
-        @keyframes pulse-outline {
-            0% { r: 25; opacity: 0.6; }
-            100% { r: 60; opacity: 0; }
+            50% { transform: translateY(-15px) rotate(1deg); }
         }
         
-        .float-animation { animation: float 8s ease-in-out infinite; }
-        .node-pulse { animation: pulse-node 4s ease-in-out infinite; }
-        .node-pulse-delayed { animation: pulse-node 4s ease-in-out infinite; animation-delay: 2s; }
+        @keyframes pulse-node {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.2); opacity: 1; }
+        }
+        
+        @keyframes flow {
+            0% { stroke-dashoffset: 20; }
+            100% { stroke-dashoffset: 0; }
+        }
+        
+        .float-animation { animation: float 6s ease-in-out infinite; }
+        .animate-pulse-slow { animation: pulse-node 3s ease-in-out infinite; }
         
         .skill-tag {
             transition: all 0.3s ease;
@@ -52,7 +47,6 @@
             box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
         }
         
-        /* Smooth scroll behavior */
         html { scroll-behavior: smooth; }
     </style>
 </head>
@@ -73,7 +67,6 @@
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 absolute w-full shadow-lg">
             <div class="px-6 py-4 space-y-3">
                 <a href="#about" class="block text-slate-600 hover:text-blue-600 py-2">About</a>
@@ -87,26 +80,22 @@
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        <!-- Background Gradients -->
         <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-slate-100 -z-10"></div>
         <div class="absolute top-20 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
         <div class="absolute bottom-0 left-0 w-96 h-96 bg-slate-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" style="animation-delay: 2s"></div>
         
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <!-- Text Content -->
             <div class="space-y-6 text-center md:text-left">
                 <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                     <span class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
-                    Postdoc Researcher @ KTH
+                    Senior AI Scientist @ AstraZeneca
                 </div>
                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight">
                     Zekarias <span class="gradient-text">Tilahun</span> Kefato
                 </h1>
                 <p class="text-xl text-slate-600 leading-relaxed max-w-lg">
-                    Machine Learning Researcher specializing in Graph Neural Networks, Graph Representation Learning, and Natural Language Processing.
+                    AI Scientist specializing in Graph Neural Networks, Large Language Models, and MLOps. Bridging cutting-edge ML research with real-world pharmaceutical applications.
                 </p>
-                
-                <!-- Two-column buttons -->
                 <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
                     <a href="#contact" class="px-8 py-3 bg-slate-900 text-white rounded-full font-medium hover:bg-slate-800 transition-all hover:scale-105 shadow-lg">
                         Get in Touch
@@ -117,24 +106,14 @@
                 </div>
             </div>
             
-            <!-- Animated Graph Visualization (Self-contained SVG) -->
+            <!-- Community Graph Visualization -->
             <div class="relative flex justify-center items-center order-first md:order-last">
-                <div class="relative w-72 h-72 md:w-96 md:h-96 float-animation">
-                    <!-- Background Glow -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-600/20 rounded-full blur-3xl"></div>
+                <div class="relative w-80 h-80 md:w-[450px] md:h-[450px] float-animation">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-600/10 rounded-full blur-3xl"></div>
                     
-                    <!-- Graph Neural Network Visualization -->
-                    <svg viewBox="0 0 400 400" class="w-full h-full drop-shadow-2xl">
+                    <svg viewBox="0 0 500 500" class="w-full h-full drop-shadow-2xl">
                         <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
-                            </linearGradient>
-                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.8" />
-                                <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.8" />
-                            </linearGradient>
-                            <filter id="glow">
+                            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
                                 <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
                                 <feMerge>
                                     <feMergeNode in="coloredBlur"/>
@@ -143,88 +122,145 @@
                             </filter>
                         </defs>
                         
-                        <!-- Background Rings -->
-                        <circle cx="200" cy="200" r="150" fill="none" stroke="#e2e8f0" stroke-width="1" opacity="0.5" />
-                        <circle cx="200" cy="200" r="100" fill="none" stroke="#cbd5e1" stroke-width="1" opacity="0.3" />
-                        
-                        <!-- Connection Lines (Edges) -->
-                        <g stroke="url(#grad2)" stroke-width="2" opacity="0.6">
-                            <line x1="200" y1="50" x2="320" y2="140" />
-                            <line x1="320" y1="140" x2="280" y2="300" />
-                            <line x1="280" y1="300" x2="120" y2="300" />
-                            <line x1="120" y1="300" x2="80" y2="140" />
-                            <line x1="80" y1="140" x2="200" y2="50" />
-                            <line x1="200" y1="50" x2="280" y2="300" opacity="0.4" />
-                            <line x1="200" y1="50" x2="120" y2="300" opacity="0.4" />
-                            <line x1="320" y1="140" x2="80" y2="140" opacity="0.4" />
-                            <line x1="320" y1="140" x2="120" y2="300" opacity="0.4" />
-                            <line x1="80" y1="140" x2="280" y2="300" opacity="0.4" />
+                        <!-- Edges between communities -->
+                        <g stroke="#cbd5e1" stroke-width="1.5" opacity="0.4">
+                            <!-- Blue to Purple connections -->
+                            <line x1="150" y1="120" x2="280" y2="150" />
+                            <line x1="130" y1="180" x2="260" y2="200" />
+                            <!-- Purple to Orange connections -->
+                            <line x1="320" y1="280" x2="360" y2="220" />
+                            <line x1="300" y1="330" x2="340" y2="280" />
+                            <!-- Orange to Teal connections -->
+                            <line x1="380" y1="320" x2="320" y2="380" />
+                            <line x1="400" y1="360" x2="350" y2="400" />
+                            <!-- Teal to Blue connections -->
+                            <line x1="180" y1="350" x2="120" y2="320" />
+                            <line x1="220" y1="380" x2="160" y2="360" />
+                            <line x1="250" y1="250" x2="320" y2="220" />
                         </g>
                         
-                        <!-- Central Node (Embedding Space) -->
-                        <circle cx="200" cy="200" r="25" fill="url(#grad1)" filter="url(#glow)" class="node-pulse" />
-                        <circle cx="200" cy="200" r="15" fill="white" opacity="0.3" />
+                        <!-- Intra-community edges - Blue Community (Left) -->
+                        <g stroke="#3b82f6" stroke-width="2" opacity="0.6">
+                            <line x1="120" y1="100" x2="150" y2="120" />
+                            <line x1="150" y1="120" x2="130" y2="180" />
+                            <line x1="130" y1="180" x2="100" y2="150" />
+                            <line x1="100" y1="150" x2="120" y2="100" />
+                            <line x1="120" y1="100" x2="130" y2="180" />
+                            <line x1="80" y1="200" x2="130" y2="180" />
+                            <line x1="80" y1="200" x2="100" y2="150" />
+                            <line x1="150" y1="220" x2="130" y2="180" />
+                        </g>
                         
-                        <!-- Input/Output Nodes -->
-                        <circle cx="200" cy="50" r="12" fill="#3b82f6" class="node-pulse" filter="url(#glow)" />
-                        <circle cx="320" cy="140" r="10" fill="#60a5fa" class="node-pulse-delayed" />
-                        <circle cx="280" cy="300" r="10" fill="#60a5fa" class="node-pulse" />
-                        <circle cx="120" cy="300" r="10" fill="#60a5fa" class="node-pulse-delayed" />
-                        <circle cx="80" cy="140" r="10" fill="#60a5fa" class="node-pulse" />
+                        <!-- Intra-community edges - Purple Community (Top) -->
+                        <g stroke="#8b5cf6" stroke-width="2" opacity="0.6">
+                            <line x1="280" y1="150" x2="320" y2="120" />
+                            <line x1="320" y1="120" x2="350" y2="150" />
+                            <line x1="350" y1="150" x2="320" y2="180" />
+                            <line x1="320" y1="180" x2="280" y2="150" />
+                            <line x1="280" y1="150" x2="350" y2="150" />
+                            <line x1="320" y1="120" x2="320" y2="180" />
+                            <line x1="260" y1="200" x2="320" y2="180" />
+                            <line x1="300" y1="100" x2="320" y2="120" />
+                        </g>
                         
-                        <!-- Hidden Layer Nodes -->
-                        <circle cx="260" cy="90" r="6" fill="#93c5fd" opacity="0.8">
-                            <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" />
-                        </circle>
-                        <circle cx="300" cy="220" r="6" fill="#93c5fd" opacity="0.8">
-                            <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" delay="1s" />
-                        </circle>
-                        <circle cx="200" cy="320" r="6" fill="#93c5fd" opacity="0.8">
-                            <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" delay="2s" />
-                        </circle>
-                        <circle cx="100" cy="220" r="6" fill="#93c5fd" opacity="0.8">
-                            <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" delay="0.5s" />
-                        </circle>
-                        <circle cx="140" cy="90" r="6" fill="#93c5fd" opacity="0.8">
-                            <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" delay="1.5s" />
-                        </circle>
+                        <!-- Intra-community edges - Orange Community (Right) -->
+                        <g stroke="#f97316" stroke-width="2" opacity="0.6">
+                            <line x1="360" y1="220" x2="400" y2="250" />
+                            <line x1="400" y1="250" x2="420" y2="300" />
+                            <line x1="420" y1="300" x2="380" y2="320" />
+                            <line x1="380" y1="320" x2="360" y2="220" />
+                            <line x1="360" y1="220" x2="420" y2="300" />
+                            <line x1="400" y1="250" x2="380" y2="320" />
+                            <line x1="440" y1="280" x2="420" y2="300" />
+                            <line x1="340" y1="280" x2="380" y2="320" />
+                        </g>
                         
-                        <!-- Data Flow Particles -->
-                        <circle cx="0" cy="0" r="3" fill="white" opacity="0.9">
-                            <animateMotion path="M200,50 L320,140" dur="2s" repeatCount="indefinite" />
-                        </circle>
-                        <circle cx="0" cy="0" r="3" fill="white" opacity="0.9">
-                            <animateMotion path="M320,140 L280,300" dur="2s" repeatCount="indefinite" delay="0.4s" />
-                        </circle>
-                        <circle cx="0" cy="0" r="3" fill="white" opacity="0.9">
-                            <animateMotion path="M280,300 L120,300" dur="2s" repeatCount="indefinite" delay="0.8s" />
-                        </circle>
-                        <circle cx="0" cy="0" r="3" fill="white" opacity="0.9">
-                            <animateMotion path="M120,300 L80,140" dur="2s" repeatCount="indefinite" delay="1.2s" />
-                        </circle>
-                        <circle cx="0" cy="0" r="3" fill="white" opacity="0.9">
-                            <animateMotion path="M80,140 L200,50" dur="2s" repeatCount="indefinite" delay="1.6s" />
-                        </circle>
+                        <!-- Intra-community edges - Teal Community (Bottom) -->
+                        <g stroke="#14b8a6" stroke-width="2" opacity="0.6">
+                            <line x1="250" y1="350" x2="320" y2="380" />
+                            <line x1="320" y1="380" x2="350" y2="400" />
+                            <line x1="350" y1="400" x2="320" y2="420" />
+                            <line x1="320" y1="420" x2="250" y2="350" />
+                            <line x1="250" y1="350" x2="350" y2="400" />
+                            <line x1="320" y1="380" x2="320" y2="420" />
+                            <line x1="380" y1="360" x2="350" y2="400" />
+                            <line x1="280" y1="400" x2="320" y2="420" />
+                            <line x1="220" y1="380" x2="250" y2="350" />
+                        </g>
                         
-                        <!-- Pulse Effect -->
-                        <circle cx="200" cy="200" r="30" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0">
-                            <animate attributeName="r" values="25;60" dur="3s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.6;0" dur="3s" repeatCount="indefinite" />
+                        <!-- Central Hub connections -->
+                        <g stroke="#64748b" stroke-width="2" opacity="0.5">
+                            <line x1="250" y1="250" x2="150" y2="150" stroke-dasharray="5,5" />
+                            <line x1="250" y1="250" x2="320" y2="150" stroke-dasharray="5,5" />
+                            <line x1="250" y1="250" x2="380" y2="280" stroke-dasharray="5,5" />
+                            <line x1="250" y1="250" x2="300" y2="380" stroke-dasharray="5,5" />
+                        </g>
+                        
+                        <!-- Blue Community Nodes -->
+                        <circle cx="120" cy="100" r="8" fill="#3b82f6" class="animate-pulse-slow" filter="url(#glow)" />
+                        <circle cx="150" cy="120" r="6" fill="#60a5fa" />
+                        <circle cx="130" cy="180" r="7" fill="#2563eb" class="animate-pulse-slow" style="animation-delay: 0.5s" />
+                        <circle cx="100" cy="150" r="5" fill="#93c5fd" />
+                        <circle cx="80" cy="200" r="6" fill="#3b82f6" />
+                        <circle cx="150" cy="220" r="5" fill="#60a5fa" />
+                        <circle cx="180" cy="150" r="4" fill="#93c5fd" opacity="0.8" />
+                        
+                        <!-- Purple Community Nodes -->
+                        <circle cx="280" cy="150" r="7" fill="#8b5cf6" />
+                        <circle cx="320" cy="120" r="8" fill="#7c3aed" class="animate-pulse-slow" filter="url(#glow)" />
+                        <circle cx="350" cy="150" r="6" fill="#a78bfa" />
+                        <circle cx="320" cy="180" r="7" fill="#8b5cf6" class="animate-pulse-slow" style="animation-delay: 1s" />
+                        <circle cx="260" cy="200" r="5" fill="#c4b5fd" />
+                        <circle cx="300" cy="100" r="5" fill="#a78bfa" />
+                        <circle cx="360" cy="190" r="4" fill="#c4b5fd" opacity="0.8" />
+                        
+                        <!-- Orange Community Nodes -->
+                        <circle cx="360" cy="220" r="7" fill="#f97316" />
+                        <circle cx="400" cy="250" r="8" fill="#ea580c" class="animate-pulse-slow" filter="url(#glow)" />
+                        <circle cx="420" cy="300" r="7" fill="#f97316" class="animate-pulse-slow" style="animation-delay: 0.3s" />
+                        <circle cx="380" cy="320" r="6" fill="#fb923c" />
+                        <circle cx="440" cy="280" r="5" fill="#fdba74" />
+                        <circle cx="340" cy="280" r="5" fill="#fb923c" />
+                        <circle cx="400" cy="200" r="4" fill="#fdba74" opacity="0.8" />
+                        
+                        <!-- Teal Community Nodes -->
+                        <circle cx="250" cy="350" r="6" fill="#14b8a6" />
+                        <circle cx="320" cy="380" r="8" fill="#0d9488" class="animate-pulse-slow" filter="url(#glow)" />
+                        <circle cx="350" cy="400" r="7" fill="#14b8a6" class="animate-pulse-slow" style="animation-delay: 0.7s" />
+                        <circle cx="320" cy="420" r="6" fill="#2dd4bf" />
+                        <circle cx="380" cy="360" r="5" fill="#5eead4" />
+                        <circle cx="280" cy="400" r="5" fill="#2dd4bf" />
+                        <circle cx="220" cy="380" r="6" fill="#14b8a6" />
+                        
+                        <!-- Central Node -->
+                        <circle cx="250" cy="250" r="20" fill="#1e293b" filter="url(#glow)">
+                            <animate attributeName="r" values="20;22;20" dur="3s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="250" cy="250" r="12" fill="#3b82f6" opacity="0.8" />
+                        <circle cx="250" cy="250" r="6" fill="white" opacity="0.9" />
+                        
+                        <!-- Data flow particles -->
+                        <circle cx="0" cy="0" r="3" fill="#3b82f6" opacity="0.9">
+                            <animateMotion path="M150,120 L250,250" dur="3s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="0" cy="0" r="3" fill="#8b5cf6" opacity="0.9">
+                            <animateMotion path="M320,150 L250,250" dur="3s" repeatCount="indefinite" delay="1s" />
+                            <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" delay="1s" />
+                        </circle>
+                        <circle cx="0" cy="0" r="3" fill="#f97316" opacity="0.9">
+                            <animateMotion path="M380,280 L250,250" dur="3s" repeatCount="indefinite" delay="2s" />
+                            <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" delay="2s" />
+                        </circle>
+                        <circle cx="0" cy="0" r="3" fill="#14b8a6" opacity="0.9">
+                            <animateMotion path="M320,380 L250,250" dur="3s" repeatCount="indefinite" delay="0.5s" />
+                            <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" delay="0.5s" />
                         </circle>
                     </svg>
-                    
-                    <!-- Labels -->
-                    <div class="absolute -top-2 -right-2 bg-white/90 backdrop-blur px-3 py-1 rounded-lg shadow-lg border border-blue-100 text-xs font-semibold text-blue-800">
-                        GNN Layer
-                    </div>
-                    <div class="absolute -bottom-2 -left-2 bg-white/90 backdrop-blur px-3 py-1 rounded-lg shadow-lg border border-blue-100 text-xs font-semibold text-blue-800">
-                        Embeddings
-                    </div>
                 </div>
             </div>
         </div>
         
-        <!-- Scroll Indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
             <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400"></i>
         </div>
@@ -255,27 +291,31 @@
                 </div>
                 <div class="md:col-span-2 space-y-6 text-lg text-slate-600 leading-relaxed">
                     <p>
-                        I am a postdoctoral researcher in Machine Learning at <strong class="text-slate-900">KTH Royal Institute of Technology</strong>. 
-                        I completed my PhD in Computer Science with a specialization in Machine Learning under the supervision of Prof. Montresor.
+                        I am a <strong class="text-slate-900">Senior AI Scientist at AstraZeneca</strong> (since 2022), where I apply cutting-edge machine learning to pharmaceutical research and development. Previously, I completed my postdoctoral research at KTH Royal Institute of Technology and earned my PhD in Computer Science with a Machine Learning specialization under the supervision of Prof. Montresor.
                     </p>
                     <p>
-                        My research broadly spans <strong class="text-slate-900">Machine Learning</strong>, <strong class="text-slate-900">Graph Analytics</strong>, 
-                        and <strong class="text-slate-900">Natural Language Processing</strong>, with particular emphasis on Graph-based Machine Learning methods.
+                        My expertise spans <strong class="text-slate-900">Graph Neural Networks</strong>, <strong class="text-slate-900">Large Language Models (LLMs)</strong>, <strong class="text-slate-900">MLOps</strong>, and <strong class="text-slate-900">Graph Analytics</strong>. I'm particularly focused on bridging advanced ML research with real-world applications in drug discovery and healthcare.
                     </p>
                     <p>
-                        Currently, my work focuses on <strong class="text-slate-900">Graph Embedding</strong> (also known as Graph Representation Learning), 
-                        building upon my doctoral research. I explore cutting-edge topics including Graph Neural Networks (GNNs), 
-                        Contextualized Graph Representation Learning, and Self-supervised GNNs.
+                        Currently, my work focuses on productionizing AI systems at scale, combining deep learning innovations with robust MLOps practices to accelerate pharmaceutical innovation.
                     </p>
                     
-                    <div class="grid grid-cols-2 gap-6 pt-6">
-                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                            <div class="text-2xl font-bold text-blue-600 mb-1">PhD</div>
-                            <div class="text-sm text-slate-600">Computer Science & ML</div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-center">
+                            <div class="text-xl font-bold text-blue-600 mb-1">2022</div>
+                            <div class="text-xs text-slate-600">AstraZeneca</div>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                            <div class="text-2xl font-bold text-blue-600 mb-1">KTH</div>
-                            <div class="text-sm text-slate-600">Royal Institute</div>
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-center">
+                            <div class="text-xl font-bold text-blue-600 mb-1">PhD</div>
+                            <div class="text-xs text-slate-600">Machine Learning</div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-center">
+                            <div class="text-xl font-bold text-blue-600 mb-1">Postdoc</div>
+                            <div class="text-xs text-slate-600">KTH</div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-center">
+                            <div class="text-xl font-bold text-blue-600 mb-1">AI</div>
+                            <div class="text-xs text-slate-600">Pharma R&D</div>
                         </div>
                     </div>
                 </div>
@@ -288,32 +328,32 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">Focus Areas</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Research Interests</h3>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Research & Expertise</h3>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100">
                     <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="share-2" class="w-7 h-7 text-blue-600"></i>
+                        <i data-lucide="brain" class="w-7 h-7 text-blue-600"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">Graph Neural Networks</h4>
-                    <p class="text-slate-600">Deep learning architectures for graph-structured data, including message passing networks and spectral methods.</p>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Large Language Models</h4>
+                    <p class="text-slate-600">Fine-tuning, prompt engineering, and deploying LLMs for scientific applications and knowledge extraction.</p>
                 </div>
                 
                 <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100">
                     <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="cpu" class="w-7 h-7 text-indigo-600"></i>
+                        <i data-lucide="share-2" class="w-7 h-7 text-indigo-600"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">Graph Embedding</h4>
-                    <p class="text-slate-600">Learning low-dimensional representations of graphs preserving structural and semantic properties.</p>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Graph Neural Networks</h4>
+                    <p class="text-slate-600">Deep learning on graph-structured data, representation learning, and molecular graph modeling.</p>
                 </div>
                 
                 <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100">
-                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="brain" class="w-7 h-7 text-purple-600"></i>
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="server" class="w-7 h-7 text-orange-600"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">Self-Supervised Learning</h4>
-                    <p class="text-slate-600">Contextualized and self-supervised approaches for graph representation learning without labeled data.</p>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">MLOps</h4>
+                    <p class="text-slate-600">Productionizing ML models, CI/CD for ML, model monitoring, and scalable AI infrastructure.</p>
                 </div>
             </div>
         </div>
@@ -332,7 +372,7 @@
                             <div class="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold text-sm">PC</div>
                             <div>
                                 <h4 class="font-bold text-slate-900">Program Committee Member</h4>
-                                <p class="text-slate-600 text-sm mt-1">IEEE SNAMS'19, SNAMS'20 • International Conference on Social Networks Analysis, Management and Security</p>
+                                <p class="text-slate-600 text-sm mt-1">IEEE SNAMS'19, SNAMS'20 • Social Networks Analysis, Management and Security</p>
                             </div>
                         </div>
                         
@@ -340,7 +380,7 @@
                             <div class="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold text-sm">PC</div>
                             <div>
                                 <h4 class="font-bold text-slate-900">Program Committee Member</h4>
-                                <p class="text-slate-600 text-sm mt-1">LOD'18, LOD'19, LOD'20 • International Conference on Machine Learning, Optimization, and Data Science</p>
+                                <p class="text-slate-600 text-sm mt-1">LOD'18, LOD'19, LOD'20 • Machine Learning, Optimization, and Data Science</p>
                             </div>
                         </div>
                         
@@ -350,7 +390,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900">Reviewer</h4>
-                                <p class="text-slate-600 text-sm mt-1">Neurocomputing • Elsevier Pattern Recognition • IEEE TKDE • Computing Journal</p>
+                                <p class="text-slate-600 text-sm mt-1">Neurocomputing • Pattern Recognition • IEEE TKDE • Computing Journal</p>
                             </div>
                         </div>
                     </div>
@@ -359,25 +399,25 @@
                 <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
                     <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2">
                         <i data-lucide="calendar" class="w-5 h-5 text-blue-600"></i>
-                        Timeline
+                        Career Timeline
                     </h4>
                     <div class="relative border-l-2 border-slate-300 ml-3 space-y-8">
                         <div class="relative pl-8">
                             <div class="absolute -left-2 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
-                            <div class="text-sm text-blue-600 font-semibold">2020</div>
-                            <div class="text-slate-900 font-medium">PC Member • SNAMS'20, LOD'20</div>
-                            <div class="text-sm text-slate-600">Reviewer • IEEE TKDE, Pattern Recognition</div>
+                            <div class="text-sm text-blue-600 font-semibold">2022 - Present</div>
+                            <div class="text-slate-900 font-bold">Senior AI Scientist</div>
+                            <div class="text-sm text-slate-600">AstraZeneca</div>
                         </div>
                         <div class="relative pl-8">
                             <div class="absolute -left-2 top-1 w-4 h-4 bg-slate-400 rounded-full border-4 border-white"></div>
-                            <div class="text-sm text-slate-500 font-semibold">2019</div>
-                            <div class="text-slate-900 font-medium">PC Member • SNAMS'19, LOD'19</div>
-                            <div class="text-sm text-slate-600">Reviewer • Neurocomputing</div>
+                            <div class="text-sm text-slate-500 font-semibold">Postdoc</div>
+                            <div class="text-slate-900 font-medium">KTH Royal Institute</div>
                         </div>
                         <div class="relative pl-8">
                             <div class="absolute -left-2 top-1 w-4 h-4 bg-slate-400 rounded-full border-4 border-white"></div>
-                            <div class="text-sm text-slate-500 font-semibold">2018</div>
-                            <div class="text-slate-900 font-medium">PC Member • LOD'18</div>
+                            <div class="text-sm text-slate-500 font-semibold">PhD</div>
+                            <div class="text-slate-900 font-medium">Computer Science</div>
+                            <div class="text-sm text-slate-600">Machine Learning Specialization</div>
                         </div>
                     </div>
                 </div>
@@ -393,86 +433,84 @@
                 <h3 class="text-3xl md:text-4xl font-bold">Technical Skills</h3>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- ML/AI -->
                 <div>
                     <h4 class="text-lg font-semibold mb-6 flex items-center gap-2 text-blue-400">
-                        <i data-lucide="code-2" class="w-5 h-5"></i>
-                        Frameworks & Tools
+                        <i data-lucide="brain" class="w-5 h-5"></i>
+                        ML & AI
                     </h4>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">TensorFlow</span>
-                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">PyTorch</span>
-                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Keras</span>
-                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Apache Spark</span>
-                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Hadoop</span>
-                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Pandas</span>
-                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">NumPy</span>
-                        <span class="skill-tag px-4 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Scikit-learn</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Graph Neural Networks</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">LLMs</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Deep Learning</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">NLP</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Representation Learning</span>
                     </div>
                 </div>
                 
+                <!-- Engineering -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-6 flex items-center gap-2 text-blue-400">
+                    <h4 class="text-lg font-semibold mb-6 flex items-center gap-2 text-orange-400">
+                        <i data-lucide="server" class="w-5 h-5"></i>
+                        MLOps & Engineering
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">MLOps</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Docker</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Kubernetes</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">CI/CD</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Model Monitoring</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Apache Spark</span>
+                    </div>
+                </div>
+                
+                <!-- Frameworks -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 flex items-center gap-2 text-purple-400">
+                        <i data-lucide="code-2" class="w-5 h-5"></i>
+                        Frameworks
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">PyTorch</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">TensorFlow</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">LangChain</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">HuggingFace</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">MLflow</span>
+                        <span class="skill-tag px-3 py-2 bg-slate-800 rounded-lg text-sm border border-slate-700 cursor-default">Kubeflow</span>
+                    </div>
+                </div>
+                
+                <!-- Languages -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 flex items-center gap-2 text-emerald-400">
                         <i data-lucide="terminal" class="w-5 h-5"></i>
-                        Programming Languages
+                        Languages
                     </h4>
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-sm">
                             <span>Python</span>
-                            <div class="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-blue-500 w-[95%]"></div>
+                            <div class="w-20 h-1.5 bg-slate-700 rounded-full">
+                                <div class="h-full bg-emerald-500 w-[95%] rounded-full"></div>
                             </div>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <span>Java</span>
-                            <div class="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-blue-500 w-[85%]"></div>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-between items-center text-sm">
                             <span>Scala</span>
-                            <div class="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-blue-500 w-[75%]"></div>
+                            <div class="w-20 h-1.5 bg-slate-700 rounded-full">
+                                <div class="h-full bg-emerald-500 w-[80%] rounded-full"></div>
                             </div>
                         </div>
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-between items-center text-sm">
+                            <span>Java</span>
+                            <div class="w-20 h-1.5 bg-slate-700 rounded-full">
+                                <div class="h-full bg-emerald-500 w-[75%] rounded-full"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
                             <span>R</span>
-                            <div class="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-blue-500 w-[80%]"></div>
+                            <div class="w-20 h-1.5 bg-slate-700 rounded-full">
+                                <div class="h-full bg-emerald-500 w-[70%] rounded-full"></div>
                             </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span>C++</span>
-                            <div class="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-blue-500 w-[70%]"></div>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span>JavaScript</span>
-                            <div class="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-blue-500 w-[75%]"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-6 flex items-center gap-2 text-blue-400">
-                        <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
-                        Visualization
-                    </h4>
-                    <div class="space-y-4">
-                        <div class="p-4 bg-slate-800 rounded-lg border border-slate-700">
-                            <div class="font-medium text-white mb-1">Plotly</div>
-                            <div class="text-sm text-slate-400">JavaScript, Python, R</div>
-                        </div>
-                        <div class="p-4 bg-slate-800 rounded-lg border border-slate-700">
-                            <div class="font-medium text-white mb-1">Python Stack</div>
-                            <div class="text-sm text-slate-400">Dash, Seaborn, Matplotlib</div>
-                        </div>
-                        <div class="p-4 bg-slate-800 rounded-lg border border-slate-700">
-                            <div class="font-medium text-white mb-1">R Ecosystem</div>
-                            <div class="text-sm text-slate-400">ggplot2, Shiny</div>
                         </div>
                     </div>
                 </div>
@@ -485,12 +523,12 @@
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Let's Connect</h2>
             <p class="text-lg text-slate-600 mb-12">
-                Interested in collaboration or want to discuss Graph Neural Networks? 
+                Interested in collaboration on Graph ML, LLMs, or AI for drug discovery? 
                 Feel free to reach out.
             </p>
             
             <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <a href="mailto:zekarias@kth.se" class="flex items-center gap-3 px-6 py-3 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors text-slate-700">
+                <a href="mailto:zekarias.tilahun@astrazeneca.com" class="flex items-center gap-3 px-6 py-3 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors text-slate-700">
                     <i data-lucide="mail" class="w-5 h-5"></i>
                     <span class="font-medium">Email</span>
                 </a>
@@ -513,20 +551,16 @@
                     © <span id="year"></span> Zekarias Tilahun Kefato. All rights reserved.
                 </p>
                 <p class="text-slate-400 text-xs">
-                    Postdoctoral Researcher at KTH Royal Institute of Technology
+                    Senior AI Scientist at AstraZeneca
                 </p>
             </div>
         </div>
     </section>
 
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
-        
-        // Dynamic year
         document.getElementById('year').textContent = new Date().getFullYear();
         
-        // Mobile menu toggle
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         
@@ -534,14 +568,12 @@
             mobileMenu.classList.toggle('hidden');
         });
         
-        // Close mobile menu when clicking on a link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
         
-        // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
@@ -553,28 +585,6 @@
                 navbar.classList.remove('bg-white/95');
                 navbar.classList.add('bg-white/80');
             }
-        });
-        
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe elements for animation
-        document.querySelectorAll('section > div').forEach((el) => {
-            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-            observer.observe(el);
         });
     </script>
 </body>
